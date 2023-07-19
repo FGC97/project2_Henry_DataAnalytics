@@ -15,6 +15,11 @@
         src="src/telecommunications.jpg"
         alt="Telecommunications"><p>
 
+## Índice
+- [Introducción y Contexto](#Introducción-y-Contexto)
+- [Introducción](#introducción)
+- [KPIs](#kpis)
+- [Conclusiones](#conclusiones)
 
 
 # **Introducción y Contexto**
