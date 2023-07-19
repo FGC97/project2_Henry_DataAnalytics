@@ -20,6 +20,7 @@
 - [Fuente de los Datos](#Fuente-de-los-Datos)
 - [Diccionario de Datos](#Diccionario-de-Datos)
 - [Proceso del Proyecto](#Proceso-del-Proyecto)
+- [Dashboard](#Dashboard)
 
 
 # **Introducción y Contexto**
@@ -43,7 +44,7 @@ En resumen, el objetivo principal es utilizar este análisis completo del sector
 # **Fuente de los Datos**
  * La información utilizada en este análisis se obtuvo de los conjuntos de datos disponibles en el sitio oficial del ENACOM (Ente Nacional de Comunicaciones).
    * [Datasets Originales](https://drive.google.com/drive/folders/1qtcfomJQd3uZFeczXE-FNzq9joAxi-m6?usp=drive_link)
- * [Datasets Utilizados]().
+ * [Datasets Utilizados y Generados](https://github.com/FGC97/project2_Henry_DataAnalytics/tree/main/datasets).
 
 # **Diccionario de Datos** 
 
@@ -121,4 +122,9 @@ Como parte de nuestro proyecto, hemos desarrollado un conjunto de KPIs estratég
 📈 **3. Incremento del porcentaje de provincias con una velocidad media de bajada de al menos 30 Mbps o más a nivel nacional:** Incremento del **20%** en el total de provincias con velocidad media de bajada de 30 Mbps o más para el año 2023 (5% Trimestral).
   * **Métrica:** Porcentaje actual de provincia con una velocidad de al menos 30 Mbps o más.
   * **Meta:** 83% en total para el año 2023.
+
+# **Dashboard**
+img
+
+
 
