@@ -15,13 +15,11 @@
         src="src/telecommunications.jpg"
         alt="Telecommunications"><p>
 
-## Índice
+# Índice
 - [Introducción y Contexto](#Introducción-y-Contexto)
 - [Fuente de los Datos](#Fuente-de-los-Datos)
 - [Diccionario de Datos](#Diccionario-de-Datos)
 - [Proceso del Proyecto](#Proceso-del-Proyecto)
-
-
 
 
 # **Introducción y Contexto**
@@ -45,6 +43,7 @@ En resumen, el objetivo principal es utilizar este análisis completo del sector
 # **Fuente de los Datos**
  * La información utilizada en este análisis se obtuvo de los conjuntos de datos disponibles en el sitio oficial del ENACOM (Ente Nacional de Comunicaciones).
    * [Datasets Originales](https://drive.google.com/drive/folders/1qtcfomJQd3uZFeczXE-FNzq9joAxi-m6?usp=drive_link)
+ * [Datasets Utilizados]().
 
 # **Diccionario de Datos** 
 
