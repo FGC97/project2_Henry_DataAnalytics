@@ -17,9 +17,11 @@
 
 ## Índice
 - [Introducción y Contexto](#Introducción-y-Contexto)
-- [Introducción](#introducción)
-- [KPIs](#kpis)
-- [Conclusiones](#conclusiones)
+- [Fuente de los Datos](#Fuente-de-los-Datos)
+- [Diccionario de Datos](#Diccionario-de-Datos)
+- [Proceso del Proyecto](#Proceso-del-Proyecto)
+
+
 
 
 # **Introducción y Contexto**
@@ -40,6 +42,10 @@ Este análisis nos permitirá tener una visión integral del sector de las telec
 
 En resumen, el objetivo principal es utilizar este análisis completo del sector de las telecomunicaciones para optimizar nuestros servicios de internet, mantenernos a la vanguardia en el mercado, mejorar las conexiones y la calidad de estas a nivel nacional y brindar una experiencia excepcional a nuestros clientes en todo el país.
 
+# **Fuente de los Datos**
+ * La información utilizada en este análisis se obtuvo de los conjuntos de datos disponibles en el sitio oficial del ENACOM (Ente Nacional de Comunicaciones).
+   * [Datasets Originales](https://drive.google.com/drive/folders/1qtcfomJQd3uZFeczXE-FNzq9joAxi-m6?usp=drive_link)
+
 # **Diccionario de Datos** 
 
 | Campo                     | Descripción                                                                                               |
@@ -52,7 +58,7 @@ En resumen, el objetivo principal es utilizar este análisis completo del sector
 | Fibra óptica              | Número de conexiones de tipo Fibra óptica en la provincia para el año y trimestre específicos.           |
 | Wireless                  | Número de conexiones de tipo Wireless en la provincia para el año y trimestre específicos.               |
 | Otros                     | Número de conexiones de otros tipos en la provincia para el año y trimestre específicos.                  |
-| Total_conexion            | Total de conexiones de Internet en la provincia para el año y trimestre específicos.                      |
+| Total conexión            | Total de conexiones de Internet en la provincia para el año y trimestre específicos.                      |
 | Accesos por cada 100 hab  | Número de accesos a Internet por cada 100 habitantes en la provincia para el año y trimestre específicos. |
 | Accesos por cada 100 hog  | Número de accesos a Internet por cada 100 hogares en la provincia para el año y trimestre específicos.    |
 | Banda ancha fija          | Número de conexiones de banda ancha fija en la provincia para el año y trimestre específicos.            |
@@ -67,12 +73,24 @@ En resumen, el objetivo principal es utilizar este análisis completo del sector
 | Otros Mbps                | Número de conexiones con velocidad de otros tipos en la provincia para el año y trimestre específicos.    |
 | Total suma Mbps           | Total de la suma de todas las conexiones de Internet por velocidad en la provincia para el año y trimestre específicos. |
 
-# Definición de KPIs (Key Performance Indicators)
+# Proceso del Proyecto
+
+1. **ETL (Extracción, Transformación y Carga de los datos)** -> Notebook: [ETL](https://github.com/FGC97/project2_Henry_DataAnalytics/blob/main/ETL_DA.ipynb).
+
+   * Durante la etapa de transformación, se implementaron diversas técnicas para garantizar la calidad y relevancia de los datos. Se realizaron acciones como la identificación y eliminación de registros duplicados, la normalización de variables para asegurar la consistencia y uniformidad de los datos, y la eliminación de aquellos datos considerados redundantes o irrelevantes para los objetivos del proyecto.
+   * Además, se aplicaron técnicas de limpieza de datos para corregir errores, como valores atípicos o ausentes, y asegurar la integridad de los datos. Esto incluyó la verificación de la coherencia de los formatos de fechas, la estandarización de las unidades de medida y la validación de los rangos de valores.
+   * Todas estas acciones de transformación fueron ejecutadas con el objetivo de obtener un conjunto de datos de alta calidad, consistente y relevante para el análisis posterior. Al garantizar la limpieza y normalización de los datos, se crea una base sólida para obtener conclusiones confiables y tomar decisiones fundamentadas en el proyecto relacionado con el sector de las telecomunicaciones.
+     
+2. **EDA (Analisis Exploratorio de los Datos)**
+   * Durante la etapa del EDA, me centre principalmente en dos datasets los cuales estaban compuestos de otros por medio de un merge. Estos fueron `internet_rangos_vel_prov` e `internet_prov`. También en esta etapa se creo uno nuevo basado en este ultimo, llamado `velocidad_media_provincia`. Para posteriormente analizarlos y sacar algunos insights y analisis de graficas para posteriormente pasar a la definicion de los KPIs, se pueden ver explicados directamente en el notebook del [EDA](https://github.com/FGC97/project2_Henry_DataAnalytics/blob/main/ETL_DA.ipynb).
+
+
+4. **Definición de KPIs (Key Performance Indicators)**
 Como parte de nuestro proyecto, hemos desarrollado un conjunto de KPIs estratégicos que están diseñados para servir como propuestas de negocios dirigidas a potenciales clientes, como el gobierno nacional de Argentina y los gobiernos provinciales. Estos KPIs tienen como objetivo principal mejorar los aspectos de conectividad en cuanto a calidad y alcance de las redes de conexión a internet en el país, así como abordar las necesidades de las provincias menos desarrolladas en el sector de las telecomunicaciones. Nuestras propuestas se enfocan en expandir la infraestructura de telecomunicaciones, mejorar la calidad de los servicios de internet y garantizar un acceso equitativo a la tecnología en todas las regiones. A través de una posible colaboración estrecha con las diferentes entidades gubernamentales, nuestro objetivo final es cerrar la brecha digital en Argentina y construir un país más conectado e inclusivo para todos los ciudadanos, sin importar su ubicación geográfica.
 
 
-📈 **1. Incremento en la cantidad de accesos de conexiones a internet por población y provincias:** Incremento del 2% anual en la cantidad de acceso de conexiones a internet por población, de las provincias Tucumán, Jujuy, Salta, Mendoza, Misiones, Catamarca, Santa Cruz, Santiago del Estero, Corrientes, Chaco, San Juan y Formosa, en los proximos 4 años. (2022-2026)
- * **Metrica:** Aumento en el numero de conexiones totales / Población total de cada provincia, en porcentaje
+📈 **1. Incremento en la cantidad de accesos de conexiones a internet por población y provincias:** Incremento del 2% anual en la cantidad de acceso de conexiones a internet por población, de las provincias Tucumán, Jujuy, Salta, Mendoza, Misiones, Catamarca, Santa Cruz, Santiago del Estero, Corrientes, Chaco, San Juan y Formosa, en los próximos 4 años. (2022-2026)
+ * **Métrica:** Aumento en el numero de conexiones totales / Población total de cada provincia, en porcentaje
  * **Meta:**
 >>> | Provincia             | 2022-Q1  | 2026-Q1  |
 >>> |-----------------------|----------|----------|
@@ -90,8 +108,8 @@ Como parte de nuestro proyecto, hemos desarrollado un conjunto de KPIs estratég
 >>> | San Juan              | 0.110541 | 0.190541 |
 
 
-📈 **2. Incremento en el porcentaje de accesos a conexiones de internet por la tecnología 'Cablemodem' en relación a los accesos totales:** Incremento del 2.5% anual en los accesos de conexión a internet en la **tecnología 'Cablemodem'** para las provincias San Juan, Tucuman, Formosa y San Luis en los proximos 4 años. (2022-2026)
- * **Metrica:** Aumento en el número de conexiones por Cablemodem / Conexiones totales de cada provincia, en porcentaje.
+📈 **2. Incremento en el porcentaje de accesos a conexiones de internet por la tecnología 'Cablemodem' en relación a los accesos totales:** Incremento del 2.5% anual en los accesos de conexión a internet en la **tecnología 'Cablemodem'** para las provincias San Juan, Tucuman, Formosa y San Luis en los próximos 4 años. (2022-2026)
+ * **Métrica:** Aumento en el número de conexiones por Cablemodem / Conexiones totales de cada provincia, en porcentaje.
  * **Meta:**
 >>> | Provincia | 2022-1  | 2026-1  |
 >>> |-----------|---------|---------|
